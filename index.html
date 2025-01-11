@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Navigation</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    
+   <!-- Navigation Buttons -->
+   <div class="button-container">
+    <button class="nav-button" onclick="showContent('home')">Home</button>
+    <button class="nav-button" onclick="showContent('about')">About</button>
+    <button class="nav-button" onclick="showContent('education')">Education</button>
+    <button class="nav-button" onclick="showContent('skill')">Skill</button>
+    <button class="nav-button" onclick="showContent('contact')">Contact</button>
+</div>
+
+<!-- Content Sections -->
+<div id="home" class="content-section">
+    <h1 class="highlighted-text">Hi, I'm <span class="name">Smit Barad</span></h1>
+    <h2 class="sub-title">
+        <span class="frontend moving-text">Frontend Developer</span><br>
+        <span class="pcb-designer moving-text">PCB Designer</span>
+    </h2>
+    <p class="summary-text">
+        I am a final-year Electronics and Communication Engineering (ECE) student with expertise in PCB design, IoT solutions, and embedded hardware. 
+        I also have hands-on experience in web frontend development and building innovative projects that bridge hardware and software.
+    </p>
+
+
+    <!-- Photo Section -->
+    <div class="photo-container">
+        <img src="https://i.imghippo.com/files/LpWD2116T.png"  alt="Smit Barad Photo" class="profile-photo">
+    </div>
+</div>
+
+
+
+
+
+<div id="about" class="content-section" style="display: none;">
+    <!-- Section Header -->
+    <h1 class="section-header">
+        <span class="white-text">About</span> <span class="blue-text">Me</span>
+    </h1>
+
+    <!-- Circular Photo with Animation -->
+    <div class="photo-wrapper">
+        <div class="photo-border">
+            <div class="border-animation"></div>
+            <!-- Static Photo -->
+            <img src="https://i.imghippo.com/files/LpWD2116T.png" alt="Smit Barad Photo" class="about-photo">
+        </div>
+    </div>
+
+    <!-- About Text -->
+    <p class="about-summary">
+        I am a passionate final-year Electronics and Communication Engineering student with a strong foundation in PCB design, IoT solutions, and embedded hardware. 
+        Alongside my expertise in hardware, I excel in web frontend development, bringing ideas to life through creative and functional interfaces. My work focuses on bridging the gap between hardware and software, creating efficient and innovative solutions.
+    </p>
+
+    <!-- Read More Button -->
+    <button class="read-more-btn" onclick="showMoreText()">Read More</button>
+
+    <!-- Hidden Extended Text -->
+    <p class="more-text" style="display: none;">
+        With hands-on experience in real-world projects, I am constantly learning and growing as an engineer and developer. 
+        I thrive on solving challenges, whether it's designing PCBs, implementing IoT systems, or building user-friendly web applications.
+
+        Driven by curiosity and consistency, I am eager to contribute my skills to impactful projects and continue developing cutting-edge solutions.
+    </p>
+</div>
+
+
+
+
+<div id="education" class="content-section" style="display: none;">
+    <!-- Section Header -->
+    <div class="education-header">
+        <span class="white-text">My</span>
+        <span class="blue-text">Journey</span>
+    </div>
+
+    <!-- Split Section -->
+    <div class="split-section">
+        <!-- Left Side: Education -->
+        <div class="left-section">
+            <h2>Education</h2>
+            <!-- Box 1 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> 2021-2025</p>
+                <p class="info-title">bachelor degree - GTU</p>
+                <p>CGPA: 7.7</p>
+                <p>Location: Dr.S. and S.S.Ghandhy Government Engineering College,Surat</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> May-2021</p>
+                <p class="info-title">H.S.C - Aryam Educational Academy</p>
+                <p>CGPA: 7.5</p>
+                <p>Location:  Bolav-Mulad,
+                    Kim Vadoli Road,
+                    Ta-Olpad,Dist:Surat.
+                     </p>
+            </div>
+            <!-- Box 3 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> March-2019</p>
+                <p class="info-title">S.S.C - P K Desai Vidhyalya</p>
+                <p>Percentage: 69%</p>
+                <p>Location : Kim, Surat</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Experience -->
+        <div class="right-section">
+            <h2>Experience</h2>
+            <!-- Box 1 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> 2024</p>
+                <p class="info-title">PCB Designer - Nexinovation</p>
+                <p>Duration: 15 day Summer internship</p>
+                <p>Location: 428 429, Green Aristo Plaza, Canal Road, Jahangir Pura, Surat, Gujarat 395005</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> 2025-Present</p>
+                <p class="info-title">Web development - Self learning</p>
+                <p>Duration: Current</p>
+                <p>HTML, CSS, JAVA </p>
+            </div>
+            <!-- Box 3 -->
+            <div class="info-box">
+                <p class="date"><span class="blue-square">🔳</span> 2021-2022</p>
+                <p class="info-title">Volunteer - NGO</p>
+                <p>Duration: 1 Year</p>
+                <p>Location: City, Country</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="skill" class="content-section" style="display: none;">
+    <!-- Section Header -->
+    <div class="skill-header">
+        <span class="white-text">My</span>
+        <span class="blue-text">Skills</span>
+    </div>
+
+    <!-- Split Section -->
+    <div class="split-section">
+        <!-- Left Side: Coding Skills -->
+        <div class="skill-section coding-skills">
+            <h2>Coding Skills</h2>
+            <div class="blue-bordered-box">
+                
+                <!-- HTML Progress -->
+<div class="progress-bar" id="html">
+    <label>HTML</label>
+    <div class="progress">
+        <div class="progress-fill" style="width: 90%;">90%</div>
+    </div>
+</div>
+
+                <!-- CSS Progress -->
+                <div class="progress-bar">
+                    <label>CSS</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <!-- Java Progress -->
+                <div class="progress-bar">
+                    <label>JAVA</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <!-- Python Progress -->
+                <div class="progress-bar">
+                    <label>PYTHON</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Professional Skills -->
+        <div class="skill-section professional-skills">
+            <h2>Professional Skills</h2>
+            <div class="blue-bordered-box">
+                <!-- Communication Progress -->
+                <div class="progress-bar">
+                    <label>Communication</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 95%;">95%</div>
+                    </div>
+                </div>
+                <!-- Teamwork Progress -->
+                <div class="progress-bar">
+                    <label>Teamwork</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <!-- Leadership Progress -->
+                <div class="progress-bar">
+                    <label>Leadership</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <!-- Problem Solving Progress -->
+                <div class="progress-bar">
+                    <label>Problem Solving</label>
+                    <div class="progress">
+                        <div class="progress-fill" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="contact" class="content-section" style="display: none;">
+    <!-- Section Header -->
+    <div class="contact-header">
+        <span class="white-text">Contact</span>
+        <span class="blue-text">Me!</span>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form-container">
+        <h2 class="form-title">Get in Touch</h2>
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-input" placeholder="Enter your name">
+            </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Enter your email">
+            </div>
+            <!-- Message Field -->
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-input" rows="5" placeholder="Write your message"></textarea>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/invites/contact/?igsh=1hfd6dwytw09l&utm_content=m79pyxr " target="_blank" class="social-icon">
+                <img src="https://w7.pngwing.com/pngs/366/932/png-transparent-camera-instagram-social-media-instagram-logo-social-media-solid-icon.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/Smit-Barad" target="_blank" class="social-icon">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/smit-barad-aa1a8828b/" target="_blank" class="social-icon">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDFJqXBa8wR3pMbEuwyJpakxxo8z26uZqEw&s" alt="LinkedIn">
+            </a>
+        </div>
+    </footer>
+
+
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
